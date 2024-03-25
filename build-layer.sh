@@ -23,7 +23,7 @@ NODE_VERSION=${NODE_VERSION:1}
 SEMVER_VERSION=7.5.4
 
 # Remove packaged layer if exists
-if [ -n "$(find . -name 'canvas-nodejs_v*.zip')" ]; then
+if [ -n "$(find . -name 'canvas-nodejs_v*.zip')" ] && [ -z "$UPDATE_LAYER" ]; then
     rm canvas-nodejs_v*.zip
 fi
 

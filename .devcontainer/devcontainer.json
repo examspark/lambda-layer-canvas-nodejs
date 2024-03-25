@@ -1,5 +1,8 @@
 {
-  "image": "public.ecr.aws/amazonlinux/amazonlinux:2",
-  "features": {
-  }
+  "build": {
+    "dockerfile": "Dockerfile",
+    "options": ["--platform", "linux/x86_64"]
+  },
+  "runArgs": ["--platform", "linux/x86_64"],
+  "features": {}
 }
